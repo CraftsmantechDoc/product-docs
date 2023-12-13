@@ -230,6 +230,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     siteTitle: 'Editor Doc',
     nav: [
       {
+        text: 'GPARK',
+        link: 'https://gpark.io/'
+      },
+      {
         text: 'Download',
         link: ''
       },
