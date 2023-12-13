@@ -6,7 +6,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
     collapsed: false,
     collapsible: true,
     items: [
-      { text: 'Introduction', link: '/Introduction.md' },
+      { text: 'Introduction', link: '/index.md' },
       { text: 'System Requirements', link: '/System Requirements.md' },
       { text: 'Update Log', link: '/Update Log.md' }
     ]
