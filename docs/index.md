@@ -1,8 +1,6 @@
-# Gpark
+# Welcome to the GPark Editor Documentation!
 
 ![editor](https://qn-basic-content.gpark.io/online/rsXs5KyaJ7Ih1702441248398.jpg)
-
-Welcome to the GPark Editor Documentation!
 
 The Editor Documentation is like a dictionary/manual of the editor. Here, you can find detailed descriptions of the functionality of each editor module.
 
