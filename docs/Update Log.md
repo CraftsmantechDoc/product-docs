@@ -1,0 +1,1 @@
+Version v0.3 - Added Editor, World Objects, and Scripting chapters. - Dec 12 2023
