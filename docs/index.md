@@ -1,4 +1,6 @@
-![img](https://arkimg-qn.ark.online/1701149235302-1.png)
+# Gpark
+
+![editor](https://qn-basic-content.gpark.io/online/rsXs5KyaJ7Ih1702441248398.jpg)
 
 Welcome to the GPark Editor Documentation!
 
@@ -6,10 +8,10 @@ The Editor Documentation is like a dictionary/manual of the editor. Here, you ca
 
 The site is still under construction. Below are the completed chapters that are ready for use:
 
-**Editor**
+## Editor
 
-**World Objects**
+## World Object
 
-**Scripting**
+## Scripting
 
 We are working around the clock to bring you the full editor documentation, so leave a bookmark and stay tuned!
