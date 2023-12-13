@@ -538,10 +538,10 @@ detect-browser@^5.3.0:
   resolved "https://registry.yarnpkg.com/detect-browser/-/detect-browser-5.3.0.tgz#9705ef2bddf46072d0f7265a1fe300e36fe7ceca"
   integrity sha512-53rsFbGdwMwlF7qvCt0ypLM5V5/Mbl0szB7GPN8y9NCcbknYOeVVXdrXEq+90IwAfrrzt6Hd+u2E2ntakICU8w==
 
-doc-theme-323@^2.1.20:
-  version "2.1.20"
-  resolved "https://registry.npmjs.org/doc-theme-323/-/doc-theme-323-2.1.20.tgz#c025f31422dae6e487e8aaa2ee575441999d11ab"
-  integrity sha512-2tkChd/LGSLC0R8z8s+BlXisHdXnMZ1UkRIBYVThQiYa3ZThktLnTDG9O2MERpaFXc4g/U3JXQg2f3MzlbZHvQ==
+doc-theme-323@^2.1.22:
+  version "2.1.22"
+  resolved "https://registry.npmjs.org/doc-theme-323/-/doc-theme-323-2.1.22.tgz#8b31948bcf5e7601e5b81884e8e2ea8f26e3e839"
+  integrity sha512-A+sczlkUpMYvCEJTCBpIDuA0xabIGcgM0zTWkW8uxkrDAXAF6KQwCqughT6uG/TO8N8V7kk9JL8ixHVclmXmcA==
   dependencies:
     "@docsearch/css" "^3.3.0"
     "@docsearch/js" "^3.3.0"
