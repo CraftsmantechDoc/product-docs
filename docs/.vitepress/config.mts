@@ -206,9 +206,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
 
 export default defineConfigWithTheme<DefaultTheme.Config>({
   ignoreDeadLinks: true,
-  title: 'GPark',
+  title: 'Editor Doc',
   appearance: false,
-  description: 'doc template',
+  description: 'Gpark Editor Doc',
   outDir: '../dist',
   head: [
     [
@@ -227,10 +227,24 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     // logo: '/logo2.png',
     feedback: 'https://github.com/CraftsmantechDoc/product-docs/',
     feedbackText: 'Feedback',
-    siteTitle: 'Editor Documentation',
+    siteTitle: 'Editor Doc',
+    nav: [
+      {
+        text: 'Download',
+        link: ''
+      },
+      {
+        text: 'Editor',
+        link: 'https://docs.gpark.io/'
+      },
+      {
+        text: 'API',
+        link: 'https://api-docs.gpark.io/'
+      }
+    ],
     socialLinks: [
       {
-        link: 'todo',
+        link: 'https://github.com/CraftsmantechDoc/product-docs/issues',
         icon: {
           svg: `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="20" height="20" rx="10" fill="#676D77"/>
@@ -243,9 +257,9 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       }
     ],
     sidebar,
-    outline: [2, 3],
+    outline: [2, 4],
     editLink: {
-      pattern: 'todo/:path',
+      pattern: 'https://github.com/CraftsmantechDoc/product-docs/tree/main/docs/:path',
       text: 'Edit'
     },
     lastUpdatedText: 'Last Update',
