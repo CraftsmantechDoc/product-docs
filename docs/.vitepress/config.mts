@@ -198,7 +198,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
     items: [
       {
         text: 'Localization',
-        link: '/Localization/LanguageLocalization.md'
+        link: '/Localization/Language Localization.md'
       }
     ]
   }
