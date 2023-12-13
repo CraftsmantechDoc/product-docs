@@ -15,7 +15,7 @@
     "sass": "^1.69.5"
   },
   "dependencies": {
-    "doc-theme-323": "^2.1.22",
+    "doc-theme-323": "^2.1.23",
     "vitepress": "1.0.0-rc.14"
   }
 }
