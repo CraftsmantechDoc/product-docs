@@ -243,7 +243,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       },
       {
         text: 'API',
-        link: 'https://api-docs.gpark.io/'
+        link: ''
       }
     ],
     socialLinks: [
