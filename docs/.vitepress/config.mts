@@ -224,7 +224,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       type: 'template'
       // version: '027'
     },
-    // logo: '/logo2.png',
+    logo: '/logo2.png',
     feedback: 'https://github.com/CraftsmantechDoc/product-docs/',
     feedbackText: 'Feedback',
     siteTitle: 'Editor Doc',
@@ -259,7 +259,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     sidebar,
     outline: [2, 4],
     editLink: {
-      pattern: 'https://github.com/CraftsmantechDoc/product-docs/tree/main/docs/:path',
+      pattern:
+        'https://github.com/CraftsmantechDoc/product-docs/tree/main/docs/:path',
       text: 'Edit'
     },
     lastUpdatedText: 'Last Update',
