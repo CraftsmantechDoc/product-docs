@@ -1,8 +1,10 @@
-**Reading this article takes about 15 minutes.**
+# Script Life Cycle
+
+**Reading this chapter takes about 15 minutes.**
 
 This chapter explains the lifecycle of scripts and its importance in the editor.
 
-# What is a Life Cycle?
+## What is a Life Cycle?
 
 The **Life Cycle** is the process of an object going from beginning to end.
 
@@ -10,7 +12,7 @@ The concept of the Life Cycle is widely used, especially in politics, economy, e
 
 In the case of scripts, the Life Cycle represents the entire process of a script from Activate to Destroy and the process and order of execution of script functions in the code.
 
-# What Does a Script Life Cycle Include?
+## What Does a Script Life Cycle Include?
 
 ### `onStart( ) : void`
 
@@ -126,7 +128,7 @@ export default class TestScript extends Core.Script {
 
 ![img](https://arkimg-qn.ark.online/1701074106862-1.png)
 
-# How to Properly Use Script Life Cycle?
+## How to Properly Use Script Life Cycle?
 
 ### Initialization
 
@@ -322,7 +324,7 @@ export default class TestEvents extends Core.Script {
 } 
 ```
 
-# Notes on Script Life Cycle
+## Notes on Script Life Cycle
 
 ### Enable the `onUpdate` Function
 

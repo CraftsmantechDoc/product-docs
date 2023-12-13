@@ -1,18 +1,17 @@
+# Character Editor
+
 **Reading this chapter takes about 20 minutes.**
 
 This chapter will explain what the Character Editor is and how to use it.
 
 
+## Character Editor Introduction
 
-# Character Editor Introduction
-
-## What is the Character Editor?
+### What is the Character Editor?
 
 - The Character Editor allows developers to freely customize the character's appearance by adjusting the properties of body type, hairstyle, clothing, makeup, etc.
 
-
-
-## Basics of the Character Editor
+### Basics of the Character Editor
 
 - Character Style
   - The Character Editor currently provide four styles of resource: **Anime Style**, **Low-poly Style**, **Realistic**, and **Cartoony**.
@@ -64,9 +63,9 @@ This chapter will explain what the Character Editor is and how to use it.
 
 ![img](https://arkimg-qn.ark.online/1701052739824-56.png)
 
-# Character Editor User Guide
+## Character Editor User Guide
 
-## Where To Find It
+### Where To Find It
 
 - Entry 1: Click the [Character Editor] button under Project Content
 
@@ -84,7 +83,7 @@ This chapter will explain what the Character Editor is and how to use it.
 
 ![img](https://arkimg-qn.ark.online/1701052739824-61.png)
 
-## Core Features
+### Core Features
 
 - **Editing character appearance**
 
@@ -118,7 +117,7 @@ This chapter will explain what the Character Editor is and how to use it.
 - Animation Sequence Preview
   - After dragging the animation sequence from the local repository into the animation list, tap a resource and click the [Play] button to preview it in the main viewport (Note: the animation sequence in the animation list can be deleted by the shortcut key "Delete")
 
-## Saving and using character editing data
+### Saving and using character editing data
 
 - Save
 
@@ -169,7 +168,8 @@ SyncDIYDataBegin()
 ```
 
 
-## Importing and exporting character editing data
+
+### Importing and exporting character editing data
 
 - Export: Select an editing data under the project content-character category, click the [Export] button in the right-click menu, and then select the export path in Explorer to export the data.
 

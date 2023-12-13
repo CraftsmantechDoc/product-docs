@@ -1,6 +1,8 @@
+# Camera
+
 **Reading this chapter takes about 20 minutes.**
 
-This article outlines how to modify various properties of the camera to achieve a variety of camera effects.
+This chapter outlines how to modify various properties of the camera to achieve a variety of camera effects.
 
 ## What is a Camera?
 

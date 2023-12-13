@@ -78,8 +78,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
       { text: 'Rich Text', link: '/UI/Rich Text.md' },
       { text: 'UI Designer', link: '/UI/UI Designer.md' },
       {
-        text: 'PC Key Binding and Premade UI',
-        link: '/UI/PC Key Binding and Premade UI.md'
+        text: 'PC Key Binding and UI Presets',
+        link: '/UI/PC Key Binding and UI Presets.md'
       },
       {
         text: 'UI Performance and Optimization',

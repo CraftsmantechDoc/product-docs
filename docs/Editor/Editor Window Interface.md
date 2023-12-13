@@ -1,23 +1,25 @@
-**Reading this article takes about 30 minutes.**
+# Editor Window Interface
 
-**This article is a comprehensive guide on the general operation of each window interface of the editor.** 
+**Reading this chapter takes about 30 minutes.**
 
-**We recommend that you look for specific modules that you are interested in.**
+This chapter provides a comprehensive guide on the general operation of each window interface of the editor.
 
-# What is an Editor Window Interface?
+We recommend that you look for specific modules that you are interested in.
+
+## What is an Editor Window Interface?
 
 The interface of the editor is composed of various windows pieced together.
 
 Each window bears part of the editor's functions. Become familiar with the operation of each window as well as its functions, only then can you use it to your desire and create your perfect game.
 
-# What Does an Editor Window Interface Contain?
+## What Does an Editor Window Interface Contain?
 
 - The editor window consists of eight parts: Top Tab, Menu Bar, Tool Bar, Local Resource Repository, Main Viewport, Object Manager, Project Content, and Properties Panel.
 - The default layout is shown below
 
 ![1701063770668-116](https://arkimg-qn.ark.online/1701063770668-116-1702377698473-1.jpeg)
 
-# How to Properly Use/Operate Different Editor Windows
+## How to Properly Use/Operate Different Editor Windows
 
 ### General Rules
 

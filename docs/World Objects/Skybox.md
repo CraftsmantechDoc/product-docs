@@ -1,6 +1,8 @@
+# Skybox
+
 **Reading this chapter takes about 15 minutes.**
 
-This section outlines how to create all kinds of colorful skies in the editor by modifying the basic properties of the Skybox.
+This chapter outlines how to create all kinds of colorful skies in the editor by modifying the basic properties of the Skybox.
 
 ## What is the Skybox?
 

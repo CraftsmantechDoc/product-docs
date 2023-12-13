@@ -1,3 +1,5 @@
+# Environment Fog
+
 **Reading this chapter takes about 15 minutes.**
 
 This article outlines the concept of environment fog, all its basic properties, and how to use environment fog in the editor.

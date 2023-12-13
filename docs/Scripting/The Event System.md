@@ -2,17 +2,17 @@
 
 This chapter outlines the rules and considerations for dispatching events between scripts in the editor.
 
-# What is the Event System?
+## What is the Event System?
 
 The event system consists of **Dispatchers** and **Listeners.**
 
 The event system mainly handles **the transfer of user input state, data transfer between client and server, and data transfer between local scripts.**
 
-## Client Listener
+### Client Listener
 
-### System Events
+#### System Events
 
-#### onKeyDown
+##### onKeyDown
 
 When the user has pressed a button in the terminal, the system will notify the client of the event trigger. **This event is only triggered on the client side.**
 
@@ -26,7 +26,7 @@ Util.InputUtil.onKeyDown(Type.Keys.K,()=>{
 });
 ```
 
-#### onKeyUp
+##### onKeyUp
 
 When the user lifts a pressed button at the terminal, the system will notify the client of the event trigger. **This event is triggered only on the client side.**
 
@@ -40,7 +40,7 @@ Util.InputUtil.onKeyUp(Type.Keys.K,()=>{
 });
 ```
 
-#### onKeyPress
+##### onKeyPress
 
 When the user holds down a pressed button at the terminal, the system will notify the client of the event trigger. **This event is triggered only on the client side.**
 
@@ -55,9 +55,9 @@ Util.InputUtil.onKeyPress(Type.Keys.K,()=>{
 });
 ```
 
-### Custom Events
+#### Custom Events
 
-#### LocalListener
+##### LocalListener
 
 This event is only triggered locally and used for data transfer between scripts.
 
@@ -75,7 +75,7 @@ Events.addLocalListener("onXXXButtonClick",()=>{
 });
 ```
 
-#### ServerListener
+##### ServerListener
 
  The client can listen for events through this function when the server passes data to the client.
 
@@ -91,9 +91,9 @@ Events.addServerListener("LevelUp",(lv:number)=>{
 });
 ```
 
-## Server Listener
+### Server Listener
 
-### ClientListener
+#### ClientListener
 
  When the client dispatches data to the server, the server can listen for events through this function
 
@@ -109,9 +109,9 @@ Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 });
 ```
 
-### Room Events
+#### Room Events
 
-#### PlayerJoinedListener
+##### PlayerJoinedListener
 
 When a player enters a room, the server notifies the server side script.
 
@@ -127,7 +127,7 @@ Events.addPlayerJoinedListener((player:Gameplay.Player)=>{
 });
 ```
 
-#### PlayerLeftListener 
+##### PlayerLeftListener 
 
 When a player leaves a room, the server notifies the server-side script.
 
@@ -138,14 +138,14 @@ For example, when the server needs to broadcast information about the player lea
 ```TypeScript
 Events.addPlayerLeftListener((player:Gameplay.Player)=>{
 
-    console.log(`Players(${player.guid}) leave the room`);
+    console.log(`Players(${player.guid}) left the room`);
 
 });
 ```
 
-## Client Dispatcher
+### Client Dispatcher
 
-### dispatchLocal 
+#### dispatchLocal 
 
 In relation to 2.1.1, when the user presses a button, the event needs to be listened for by other scripts.
 
@@ -155,7 +155,7 @@ This script can be written as follows. **This event can only be dispatched local
 Events.dispatchLocal("onXXXButtonClick");
 ```
 
-### dispatchToServer
+#### dispatchToServer
 
 In relation to 2.2.1, when a user launches an attack using a skill, the server needs to be notified for synchronization.
 
@@ -166,9 +166,9 @@ let skills:number = 6;
 Events.dispatchToServer("Attack",skills);
 ```
 
-## Server Dispatcher
+### Server Dispatcher
 
-### dispatchToClient
+#### dispatchToClient
 
 In relation to 2.1.2 - 2, combined with 2.2.1.
 
@@ -189,24 +189,7 @@ Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 });
 ```
 
-### dispatchToAllRoomClient)
-
-Like above, if you want to synchronize the player's upgrade message to all clients in the room. This script can be written as follows, this event can only be dispatched on the server side.
-
-```TypeScript
-Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
-
-    console.log(`The player(${player.guid}) uses skill ${skills} to launch an attack.`);
-
-    let level:number = 66;
-
-    //Notify all players in the room to receive LevelUp event, event data for player upgrade to level
-    Events.dispatchToAllRoomClient("LevelUp",player,level);
-    
-});
-```
-
-### dispatchToAllClient
+#### dispatchToAllClient
 
 Like above, if you want to synchronize the upgrade message of the player to all clients.
 
@@ -225,17 +208,17 @@ Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 });
 ```
 
-### dispatchLocal)
+#### dispatchToLocal
 
-Corresponding to 2.1.2 - 1, this event can only be dispatched locally.
+This event can only be dispatched locally.
 
 ```Apache
-Events.dispatchLocal("eventName");
+Events.dispatchToLocal("eventName");
 ```
 
-# Notes and Tips on Using the Event System
+## Notes and Tips on Using the Event System
 
-## Distinguish the Runtime Environment of the Script
+### Distinguish the Runtime Environment of the Script
 
 The dispatchers and listeners have strict runtime environment requirements.
 
@@ -243,19 +226,19 @@ They must be run in the corresponding runtime environment to be effective.
 
 It is recommended, when using the event system, to determine the script runtime environment in the outer layer.
 
-**this.isRunningClient()        --->        Check if it's the client**
+**this.isRunningClient()        ===>        Check if it's the client**
 
-**GamePlay.isClient()            --->        Check if it's the client**
+**GamePlay.isClient()            ===>        Check if it's the client**
 
-**GamePlay.isServer()           --->        Check if it's the server**
+**GamePlay.isServer()           ===>        Check if it's the server**
 
-## Write Server-side Related Code in a Separate Script
+### Write Server-side Related Code in a Separate Script
 
 In the editor, server-side and client-side can be written in the same project file.
 
 To prevent the access of properties in the same script, leading to logic conflict due to the different environments, it is recommended to write the server-side code in a separate script, so as to locate the problem quickly when things go wrong.
 
-## Close the dispatchers and listeners after the object is destroyed
+### Close the dispatchers and listeners after the object is destroyed
 
 Dispatchers and listeners in the event system are not destroyed according to the script lifecycle. It is recommended to close the connection of dispatchers and listeners in onDestroy of the script lifecycle.
 

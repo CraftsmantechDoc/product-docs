@@ -1,21 +1,24 @@
+# Screen Orientation & Resolution Simulation
+
 **Reading this chapter takes about 10 minutes.**
 
 This chapter introduces the following editor features:
 
-1. Resolution Simulation
-2. Screen Orientation
+1. Resolution simulation
 
-# Resolution Simulation
+2. Screen orientation
+
+## Resolution Simulation
 
 Developers can use the resolution simulation function to test the game effect under different resolutions in the editing state and test run state.
 
-## Where To Find It
+### Where To Find It
 
 Find this button on the top-right corner of the Editor toolbar.
 
 ![img](https://arkimg-qn.ark.online/1701057023405-15.png)
 
-## Panel Description
+### Panel Description
 
 ![img](https://arkimg-qn.ark.online/1701057023403-1.png)
 
@@ -30,7 +33,7 @@ Find this button on the top-right corner of the Editor toolbar.
 
 ![img](https://arkimg-qn.ark.online/1701057023404-3.png)
 
-## Usage Effect
+### Effect
 
 - Main viewport: according to the selected resolution and viewport size, the viewport is divided into operable areas and invalid areas.
   - ![img](https://arkimg-qn.ark.online/1701057023404-4.png)
@@ -43,25 +46,25 @@ Find this button on the top-right corner of the Editor toolbar.
 
 <center>4:3</center>
 
-# Screen Orientation
+## Screen Orientation
 
 The games on the mobile platform are divided into landscape mode and portrait mode.
 
 Developers can use the Screen Orientation functions to debug their games in the editing and PIE state. This will also be used as the format to set the horizontal and portrait mode after the game is released on the mobile platform.
 
-## Where To Find It
+### Where To Find It
 
 Same as above, find this button on the top-right corner of the Editor toolbar.
 
 ![img](https://arkimg-qn.ark.online/1701057023404-7.png)
 
-## Panel Description
+### Panel Description
 
 ![img](https://arkimg-qn.ark.online/1701057023404-8.png)
 
 - You can set the game to landscape or portrait mode after selecting the landscape or portrait option in the device display settings below the pop-up window (landscape is selected by default)
 
-## **Usage Effect**
+### **Effect**
 
 - Main viewport: according to the landscape or portrait mode and resolution settings, the viewport is divided into operable and invalid areas.
   - ![img](https://arkimg-qn.ark.online/1701057023405-9.png)

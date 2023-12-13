@@ -1,16 +1,14 @@
 **Reading this chapter takes about 10 minutes.**
 
-# Methods and Examples of Using and Dynamically Loading Resources
+## Methods and Examples of Using and Dynamically Loading Resources
 
-## Getting existing objects in the scene
+### Getting existing objects in the scene
 
-### Function:
-
-#### **[getChildren() : Array]**
+##### **getChildren() : Array`<GameObject>`**
 
  get all child objects().
 
- **The client does not maintain a parent-child relationship. It's recommended to use asyncFind instead.**
+ **The client does not maintain a parent-child relationship. It's recommended to use `asyncFind` instead.**
 
 ```TypeScript
 let goList = this.gameObject.getChildren();
@@ -19,7 +17,7 @@ goList.forEach(element => {
 });
 ```
 
-#### **[getChildByName(name: string) : GameObject]**
+##### **getChildByName(name: string) : GameObject**
 
 Get child objects by name (object name).
 
@@ -27,17 +25,17 @@ Get child objects by name (object name).
 let childrenObj = this.gameObject.getChildByName("MyChildrenName");
 ```
 
-#### **[getChildByGuid(guid: string) : GameObject]**
+#### ****getChildByGameObjectId(gameObjectId: string) : GameObject****
 
 Get child objects by GUID (object GUID).
 
 ```TypeScript
-let childrenObjByGUID = this.gameObject.getChildByGuid("MyChildrenGUID");
+let childrenObjByGameObjectId = this.gameObject.getChildByGameObjectId("MyChildrenGameObjectId");
 ```
 
 ### **Static Functions:**
 
-#### **[find(guid: string) : GameObject]**
+##### **find(gameObjectId: string) : GameObject**
 
 Find current object (object GUID).
 
@@ -45,25 +43,25 @@ You can find all the objects that inherit from Core.GameObject.
 
 ```TypeScript
 //find GameObject
-let goByfind = Gameplay.GameObject.find("GameObjectGUID");
+let goByfind = GameObject.findGameObjectById("GameObjectID");
 
 //find Other Object eg.
-let myTrigger = Gameplay.GameObject.find("TriggerObjGUID") as Gameplay.BoxTrigger;
+let myTrigger = GameObject.findGameObjectById("TriggerObjID") as BoxTrigger;
 ```
 
-#### **[asyncFind(guid: string) : Promise]**
+##### **asyncFindGameObjectById(gameObjectId: string) : Promise`<GameObject>`**
 
 Asynchronous lookup of the current object (GUID of the object).
 
 You can find all the objects that inherit from Core.GameObject.
 
 ```TypeScript
-@Core.Class
-export default class GetObj extends Core.Script {
+@Component
+export default class GetObj extends Script {
     
-    protected async OnStart(): Promise<void> {
+    protected async OnStart(): Promise`<void>` {
 
-       let goByAsyfind = await Gameplay.GameObject.asyncFind("GameObjectGUID");
+       let goByAsyfind = await GameObject.asyncFindGameObjectById("GameObjectGameObjectId");
 
     }
     
@@ -72,20 +70,20 @@ export default class GetObj extends Core.Script {
 
 When using asynchronous loading, the await modifier is required and the asynchronous modifier (async) is included in the function
 
-#### **[getGameObjectsByName(name: string) : Array]**
+##### **findGameObjectsByName(name: string) : Array`<GameObject>`**
 
 Find all objects by name (object name).
 
 ```TypeScript
-@Core.Class
-export default class GetObj extends Core.Script {
+@Component
+export default class GetObj extends Script {
     
     protected OnStart(): void {
 
-       let goListByName = Gameplay.GameObject.getGameObjectsByName("GameObjectsName");
+       let goListByName = GameObject.findGameObjectsByName("GameObjectsName");
        goListByName.forEach(element => {
 
-           console.log(`${this.gameObject.name} | ${element.name} | ${element.guid}`);
+           console.log(`${this.gameObject.name} | ${element.name} | ${element.gameObjectId}`);
 
        });
 
@@ -94,27 +92,27 @@ export default class GetObj extends Core.Script {
 }
 ```
 
-#### **[getGameObjectByName(name: string) : GameObject]**
+##### **findGameObjectByName(name: string) : GameObject**
 
  Find all objects by name (object name).
 
  **Return the first found object. If there are multiple objects with the same name, return a random one.**
 
 ```TypeScript
-let goByName = Gameplay.GameObject.getGameObjectByName("GameObjectName");
+let goByName = GameObject.findGameObjectByName("GameObjectName");
 ```
 
-#### **[findGameObjectByTag(InTag: string) : Array]**
+##### **findGameObjectsByTag(InTag: string) : Array`<GameObject>`**
 
 ​      Get `GameObject` by custom` tag( )`.
 
-```Scala
-@Core.Class
-export default class GetObj extends Core.Script {
+```typescript
+@Component
+export default class GetObj extends Script {
     
     protected OnStart(): void {
 
-       let goListByTag = Gameplay.GameObject.findGameObjectByTag("GameObjectsTag");
+       let goListByTag = GameObject.findGameObjectsByTag("GameObjectsTag");
        goListByTag.forEach(element => {
 
            console.log(`${this.gameObject.name} | ${element.name} | ${element.getTag()}`);
@@ -126,9 +124,9 @@ export default class GetObj extends Core.Script {
 }
 ```
 
-## 1.2 Cloning Existing Objects in the Scene
+### Cloning Existing Objects in the Scene
 
-####  **[Clone() : GameObject]**
+##### **clone() : GameObject**
 
  Clone object（return object: `GameObject`）
 
@@ -136,54 +134,53 @@ export default class GetObj extends Core.Script {
 let goClone = this.gameObject.Clone();
 ```
 
-## Generating Objects from the Repository in the Scene
+### Generating Objects from the Repository in the Scene
 
-####  **[SpawnGameObject(assetId: string, bInReplicates?: boolean) : GameObject]**
+##### **spawn(assetId: string, gameObjectInfo?: mw.GameObjectInfo) : GameObject**
 
 ​      Construct a `GameObject` based on the GUID (GUID of the resource, synchronized or not).
 
 ```TypeScript
-@Core.Class
-export default class GetObj extends Core.Script {
-
-    @Core.Property()
-    preloadAssets = "AssetID,EffectAssetID";
+@Component
+export default class GetObj extends Script {
 
     /** When the script is instantiated, this function will be called before the first frame is updated */
     protected OnStart(): void {
 
         //Create GameObject
-        let assetGameObject = Gameplay.GameObject.SpawnGameObject("AssetID");
+        let assetGameObject = GameObject.spawn("AssetID");
         
         //Create Other Object eg.
-        let effectObj = Gameplay.GameObject.SpawnGameObject("EffectAssetID") as Gameplay.EffectSystem;
+        let effectObj = GameObject.spawn("EffectAssetID") as Effect;
 
     }
 
 }
 ```
 
-When using the SpawnGameObject function, the resource ID to be generated needs to be preloaded
+When using the `spawn` function, the resource ID to be generated needs to be preloaded
 
 Use the above method and add it to the script
 
-​    **@Core.Property()**
+```typescript
+AssetUtil.asyncDownloadAsset("").then((flag) => {
+    if(flag) {
+        // your code
+    }
+});
+```
 
-​    **preloadAssets = "AssetID,EffectAssetID";**
-
-
-
-# Difference Between Using and Loading Resources
+## Difference Between Using and Loading Resources
 
 **The most essential difference is between Get and New.**
 
-## Using Resource
+### Using Resource
 
  **All functions in 1.1** serve **to Get Resources, that is to Use Resources**
 
  Using a resource will point the object's memory address to the used variable, without generating new memory consumption.
 
-## Loading Resource
+### Loading Resource
 
  **All functions in 1.2, 1.3, and 1.4 serve to create New, that is to Load Resource**
 
@@ -193,29 +190,31 @@ Use the above method and add it to the script
 
  It is recommended to make a pool of objects that need to be repeatedly created and destroyed in logic to avoid excessive memory consumption.
 
-# Notes on Using and Loading Resources
+## Notes on Using and Loading Resources
 
-1. The object you get through the parent node can only be written on the Server side, the Client side currently does not maintain the parent-child node relationship.
+**1. The object you get through the parent node can only be written on the Server side, the Client side currently does not maintain the parent-child node relationship.**
 
-If the logic needs to determine the parent-child node relationship on the client side, it can be made into an interface to verify on the server side.
-
-
-
-2. It is best to make an object pool management when creating and destroying objects frequently (e.g. bullets)
-
-This is to reduce the program memory and execution efficiency overhead.
+**If the logic needs to determine the parent-child node relationship on the client side, it can be made into an interface to verify on the server side.**
 
 
 
-3. All resource objects obtained should be nulled before use to prevent the code from running
+**2. It is best to make an object pool management when creating and destroying objects frequently (e.g. bullets)**
+
+**This is to reduce the program memory and execution efficiency overhead.**
 
 
 
-4. Resources that need to be loaded dynamically (resources in the repository) must be preloaded (preloaded) first, otherwise they will not be created
+**3. All resource objects obtained should be nulled before use to prevent the code from running**
 
+
+
+**4. Resources that need to be loaded dynamically (resources in the repository) must be preloaded (preloaded) first, otherwise they will not be created**
+
+```
  @Core.Property()
 
   preloadAssets = "Resource ID";
+```
 
  **Notes:**
 
@@ -225,7 +224,7 @@ This is to reduce the program memory and execution efficiency overhead.
 
 
 
- 5. Suggestions on how to use synchronous and asynchronous find objects (`find` and `asyncFind`) 
+ **5. Suggestions on how to use synchronous and asynchronous find objects (`find` and `asyncFind`) **
 
  During code execution, if the timing of the logic is important, it is recommended to use asynchronous loading. If it is not important, use synchronous loading.
 

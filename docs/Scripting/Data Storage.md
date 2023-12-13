@@ -1,12 +1,14 @@
+# Data Storage
+
 **Reading this chapter takes about 10 minutes.**
 
 This chapter outlines how to store data for experiences through the API.
 
-# Overview of Data Storage
+## Overview of Data Storage
 
 For handling persistent storage of data, each player is allowed to store up to 16KB of encoded data per game. Any data exceeding this limit is not guaranteed to be stored and may be lost. Exceeding the limit will display a warning in the editor's log. 
 
-# How to Utilize Data Storage
+## How to Utilize Data Storage
 
 ### Storage Environment
 
@@ -106,6 +108,6 @@ The editor provides two ways to store data, one is customized and the other is s
     }
 ```
 
-# Notes on Data Storage 
+## Notes on Data Storage 
 
 Data storage-related APIs can only be accessed through server scripts. Attempting to access them in client scripts will result in errors.
