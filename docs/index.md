@@ -1,6 +1,6 @@
 # Welcome to the GPark Editor Documentation!
 
-![editor](https://qn-basic-content.gpark.io/online/rsXs5KyaJ7Ih1702441248398.jpg)
+![NQDVCpCLyB](https://arkimg-qn.ark.online/NQDVCpCLyB.jpg)
 
 The Editor Documentation is like a dictionary/manual of the editor. Here, you can find detailed descriptions of the functionality of each editor module.
 
@@ -24,7 +24,7 @@ This section covers essential topics such as Data Storage, Network Synchronizati
 
 
 
-##### Below are the chapters that are not yet available
+##### Below are the chapters that are not yet available:
 
 ## [Gameplay Objects](https://docs.gpark.io/Gameplay%20Objects/Advanced%20Vehicle.html)
 
