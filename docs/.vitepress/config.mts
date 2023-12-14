@@ -208,7 +208,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
   ignoreDeadLinks: true,
   title: 'Editor Doc',
   appearance: false,
-  description: 'Welcome to the GPark Editor Documentation!',
+  description: 'The Editor Documentation is like a dictionary/manual of the GPark editor. Here, you can find detailed descriptions of the functionality of each editor module.',
   outDir: '../dist',
   head: [
     [
