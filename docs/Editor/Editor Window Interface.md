@@ -84,7 +84,7 @@ Each window bears part of the editor's functions. Become familiar with the opera
 
 ![img](https://arkimg-qn.ark.online/1701063770648-12.png)
 
-- See more details in the Draw Mode document. (Coming soon)
+- See more details in the Draw Mode document. 
 
 #### Transform Tools
 

@@ -51,8 +51,8 @@ For more information about the difference between the editor client and server, 
 ### Example Script:
 
 ```TypeScript
-@Core.Class
-export default class TestScript extends Core.Script {
+@Component
+export default class TestScript extends Script {
     protected onStart(): void {
 
         //Enable the OnUpdate function
@@ -138,13 +138,13 @@ export default class TestScript extends Core.Script {
 **Example Script:**
 
 ```TypeScript
-@Core.Class
-export default class TestScript extends Core.Script {
+@Component
+export default class TestScript extends Script {
 
     //Declare some properties
-    public v3:Type.Vector;
-    public level:number;
-    public name:string;
+    public v3: Vector;
+    public level: number;
+    public name: string;
 
     protected onStart(): void {
     
@@ -184,8 +184,8 @@ export default class TestScript extends Core.Script {
 4. If it is not necessary to use `onUpdate`, try to use other functions instead. For example, you can use `setTimeout` to make timers for example. Only when you want to create a hit streak counter, the timer needs to be terminated or retimed, at this time `setTimeout` cannot meet the needs.
 
 ```TypeScript
-@Core.Class
-export default class TestScript extends Core.Script {
+@Component
+export default class TestScript extends Script {
 
     /** if it's clickable */
     isCanHit = true;
@@ -276,8 +276,8 @@ Usually, we use a lot of `addListener` functions in `onStart` function or in UI 
 **Example Script:**
 
 ```TypeScript
-@Core.MWClass
-export default class TestEvents extends Core.Script {
+@Component
+export default class TestEvents extends Script {
 
     //Declaring an array of events
     myEvents = new Array<Events.EventListener>();

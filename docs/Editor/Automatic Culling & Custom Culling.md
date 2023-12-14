@@ -9,7 +9,7 @@ This chapter outlines the editor's preset automatic culling rules and how to cus
 - **Definition of Culling and Cull Distance:** When the distance between an object and the camera exceeds a certain specific distance, the editor will automatically cull the object and not render it on the screen. This distance is called the cull distance. 
 - The editor provides a set of preset automatic culling rules that can balance screen presentation and performance in most scenarios. The calculation method of these preset automatic culling rules is: 
 
-**The actual cull distance of an object in the game (in cm) = The default cull distance of the object (determined by the object size)** Graphics quality coefficient*
+**The actual cull distance of an object in the game (in cm) = The default cull distance of the object (determined by the object size) * Graphics quality coefficient** 
 
 - **The default cull distance of the object** is determined by the size of the object. The larger the bounding sphere diameter of the object, the farther the default cull distance. The default cull distance of each object can be viewed in the grayed-out [Cull Distance] in [Scene Settings] for each object (the following section will introduce how to use custom cull distance; for now, just take it as the default cull distance displayed if custom culling is not enabled). This rule ensures that relatively larger objects are not easily culled. 
 - The **Graphics Quality Coefficient** also has a fixed set of rules. The higher the performance level of the player's device, the larger the graphics quality coefficient (between 1.2 and 2; movie-level quality is 2). This goal is to provide players with better devices and a better gaming experience.

@@ -8,7 +8,7 @@ The Editor Documentation is like a dictionary/manual of the editor. Here, you ca
 
 
 
-## Below are the chapters that are ready for use:
+##### Below are the chapters that are ready for use:
 
 ## [Editor](https://docs.gpark.io/Editor/Editor%20Window%20Interface.html)
 
@@ -24,7 +24,7 @@ This section covers essential topics such as Data Storage, Network Synchronizati
 
 
 
-## Below are the chapters that are not yet available:
+##### Below are the chapters that are not yet available
 
 ## [Gameplay Objects](https://docs.gpark.io/Gameplay%20Objects/Advanced%20Vehicle.html)
 
