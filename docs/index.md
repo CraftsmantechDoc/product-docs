@@ -1,6 +1,6 @@
 # Welcome to the GPark Editor Documentation!
 
-![NQDVCpCLyB](https://arkimg-qn.ark.online/NQDVCpCLyB.jpg)
+![NQDVCpCLyB](https://qn-basic-content.gpark.io/athena/upload_file/online/1ce99414efa946ff8cbdc8e114e6b43e_5075331.webp)
 
 The Editor Documentation is like a dictionary/manual of the editor. Here, you can find detailed descriptions of the functionality of each editor module.
 
