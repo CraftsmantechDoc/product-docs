@@ -71,7 +71,7 @@ export default class NewScript extends Core.Script {
 - Property Description: The environment fog provides convenient preset effects for users to choose from. More environmental fog effects may be added in the future.
 
 | **Enum Name**  | **Value** | **Description**                                            |
-| -------------- | --------- | ---------------------------------------------------------- |
+| -------------- | -------------- | ----------------------------------------------------- |
 | Default        | 0         | Default effect, moderate distance, and concentration.      |
 | NearFog        | 1         | Environment fog in the foreground with a shorter distance. |
 | FarFog         | 2         | Environment fog in the background with a longer distance.  |
