@@ -1,8 +1,10 @@
-**Reading this article takes about 15 minutes.**
+# Script Life Cycle
+
+**Reading this chapter takes about 15 minutes.**
 
 This chapter explains the lifecycle of scripts and its importance in the editor.
 
-# What is a Life Cycle?
+## What is a Life Cycle?
 
 The **Life Cycle** is the process of an object going from beginning to end.
 
@@ -10,7 +12,7 @@ The concept of the Life Cycle is widely used, especially in politics, economy, e
 
 In the case of scripts, the Life Cycle represents the entire process of a script from Activate to Destroy and the process and order of execution of script functions in the code.
 
-# What Does a Script Life Cycle Include?
+## What Does a Script Life Cycle Include?
 
 ### `onStart( ) : void`
 
@@ -49,8 +51,8 @@ For more information about the difference between the editor client and server, 
 ### Example Script:
 
 ```TypeScript
-@Core.Class
-export default class TestScript extends Core.Script {
+@Component
+export default class TestScript extends Script {
     protected onStart(): void {
 
         //Enable the OnUpdate function
@@ -126,7 +128,7 @@ export default class TestScript extends Core.Script {
 
 ![img](https://arkimg-qn.ark.online/1701074106862-1.png)
 
-# How to Properly Use Script Life Cycle?
+## How to Properly Use Script Life Cycle?
 
 ### Initialization
 
@@ -136,13 +138,13 @@ export default class TestScript extends Core.Script {
 **Example Script:**
 
 ```TypeScript
-@Core.Class
-export default class TestScript extends Core.Script {
+@Component
+export default class TestScript extends Script {
 
     //Declare some properties
-    public v3:Type.Vector;
-    public level:number;
-    public name:string;
+    public v3: Vector;
+    public level: number;
+    public name: string;
 
     protected onStart(): void {
     
@@ -182,8 +184,8 @@ export default class TestScript extends Core.Script {
 4. If it is not necessary to use `onUpdate`, try to use other functions instead. For example, you can use `setTimeout` to make timers for example. Only when you want to create a hit streak counter, the timer needs to be terminated or retimed, at this time `setTimeout` cannot meet the needs.
 
 ```TypeScript
-@Core.Class
-export default class TestScript extends Core.Script {
+@Component
+export default class TestScript extends Script {
 
     /** if it's clickable */
     isCanHit = true;
@@ -274,8 +276,8 @@ Usually, we use a lot of `addListener` functions in `onStart` function or in UI 
 **Example Script:**
 
 ```TypeScript
-@Core.MWClass
-export default class TestEvents extends Core.Script {
+@Component
+export default class TestEvents extends Script {
 
     //Declaring an array of events
     myEvents = new Array<Events.EventListener>();
@@ -322,7 +324,7 @@ export default class TestEvents extends Core.Script {
 } 
 ```
 
-# Notes on Script Life Cycle
+## Notes on Script Life Cycle
 
 ### Enable the `onUpdate` Function
 

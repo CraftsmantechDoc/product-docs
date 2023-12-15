@@ -1,3 +1,5 @@
+# Environment Fog
+
 **Reading this chapter takes about 15 minutes.**
 
 This article outlines the concept of environment fog, all its basic properties, and how to use environment fog in the editor.
@@ -69,7 +71,7 @@ export default class NewScript extends Core.Script {
 - Property Description: The environment fog provides convenient preset effects for users to choose from. More environmental fog effects may be added in the future.
 
 | **Enum Name**  | **Value** | **Description**                                            |
-| -------------- | --------- | ---------------------------------------------------------- |
+| -------------- | -------------- | ----------------------------------------------------- |
 | Default        | 0         | Default effect, moderate distance, and concentration.      |
 | NearFog        | 1         | Environment fog in the foreground with a shorter distance. |
 | FarFog         | 2         | Environment fog in the background with a longer distance.  |

@@ -6,7 +6,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
     collapsed: false,
     collapsible: true,
     items: [
-      { text: 'Introduction', link: '/Introduction.md' },
+      { text: 'Introduction', link: '/index.md' },
       { text: 'System Requirements', link: '/System Requirements.md' },
       { text: 'Update Log', link: '/Update Log.md' }
     ]
@@ -78,8 +78,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
       { text: 'Rich Text', link: '/UI/Rich Text.md' },
       { text: 'UI Designer', link: '/UI/UI Designer.md' },
       {
-        text: 'PC Key Binding and Premade UI',
-        link: '/UI/PC Key Binding and Premade UI.md'
+        text: 'PC Key Binding and UI Presets',
+        link: '/UI/PC Key Binding and UI Presets.md'
       },
       {
         text: 'UI Performance and Optimization',
@@ -208,7 +208,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
   ignoreDeadLinks: true,
   title: 'Editor Doc',
   appearance: false,
-  description: 'Gpark Editor Doc',
+  description: 'The Editor Documentation is like a dictionary/manual of the GPark editor. Here, you can find detailed descriptions of the functionality of each editor module.',
   outDir: '../dist',
   head: [
     [
@@ -243,7 +243,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       },
       {
         text: 'API',
-        link: 'https://api-docs.gpark.io/'
+        link: ''
       }
     ],
     socialLinks: [

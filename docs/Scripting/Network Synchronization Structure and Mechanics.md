@@ -1,4 +1,6 @@
-**Reading this article takes about 15 minutes.**
+# Network Synchronization Structure and Mechanics
+
+**Reading this chapter takes about 15 minutes.**
 
 To understand the principle of network synchronization, we must first answer a few essential questions:
 
@@ -6,9 +8,9 @@ To understand the principle of network synchronization, we must first answer a f
 2. What are they synchronizing?
 3. How to achieve network synchronization?
 
-# What is a Client? What is a Server?
+## What is a Client? What is a Server?
 
-## Client
+### Client
 
 > The **Client**, or user-end, is the program that provides local services to clients as opposed to the server. Except for some applications that run only locally, they are generally installed on ordinary terminals and must run in conjunction with each other and the server.
 
@@ -20,7 +22,7 @@ For **online games,** the game data or game rules are stored or run **on the ser
 
 On the other hand, **stand-alone games** are not connected to the server and store game logic and data locally.
 
-## Server
+### Server
 
 > A Server provides service for the client, such as providing resources to the client and saving client data. It is an important way to realize game characterization and the most direct method to express through the game. For example, if you want to modify the parameters of a certain NPC, simply reload it and it will be reflected immediately in the game.
 
@@ -33,11 +35,11 @@ Example Cases:
 1. The synchronization mechanism of a casual **tile-matching game** is usually based on a weak network mechanism. It can be played as a single-player game when there is no internet connection. It stores the game results locally after the game is finished, then it uploads and synchronizes local data to the server when a network connection is available.
 2. The synchronization mechanism of a real-time competitive game like **Gobang** requires real-time synchronization of data. The server creates a room, client 1 and client 2 join the room. All the data from the client's game is synchronized to the other clients in the room by the server. When the clients are running the game, the server has to make a logical judgment of victory and defeat according to the winning condition set by developers, then the obtained result will be synchronized to other clients in the room.
 
-# Network Synchronization Structure
+## Network Synchronization Structure
 
 Before we can understand network synchronization in the editor, we need to first know the "Static" function.
 
-## Static
+### Static
 
 ![img](https://arkimg-qn.ark.online/1701067302844-3.png)
 
@@ -55,7 +57,7 @@ The board of a chess game does not need to be moved, deformed, etc., and is gene
 
 The pieces, on the other hand, need to be created and destroyed dynamically, so they are generally non-static objects
 
-## Differences between Client, Server, and Double-ended
+### Differences between Client, Server, and Double-ended
 
 ![img](https://arkimg-qn.ark.online/1701067302821-1.png)
 
@@ -63,7 +65,7 @@ The pieces, on the other hand, need to be created and destroyed dynamically, so 
 
 > As shown in the above two figures, there are two ways to set the "Network Status" of an object. The three different modes are Client, Server, and Double-ended (Server and Client).
 
-## Client
+### Client
 
 > Objects with their "Network Status" set to "Client" will only be created on the client side. They will not be created on the server side and will not be synchronized.
 
@@ -75,7 +77,7 @@ Example:
 
 Sound effects, special effects, etc., only create, play, and stop (and other operations) on the client.
 
-## Server
+### Server
 
 > Objects with their "Network Status" set to "Server" will only be created on the server side. They will not be created on the client side and will not be synchronized.
 
@@ -85,7 +87,7 @@ Example: coordinate anchor for NPC path navigation.
 
 The client does not need to store and determine the anchor point object of the NPC. It only needs to request the server to send the coordinate information of the anchor point of the NPC, or directly return its path to seek the path when navigating.
 
-## Double-ended (Server and Client)
+### Double-ended (Server and Client)
 
 > Objects with their "Network Status" set to "Double-ended" will first be loaded and created on the server side. The client loads the objects first, waits for a command from the server to create, and then establishes communication with the server.
 >
@@ -99,9 +101,11 @@ Chess pieces, monsters, vehicles, etc.
 
 Their coordinates, colors, collisions, and other interactions need to be determined and synchronized in real-time.
 
-## Client to Server
+## Achieving Synchronization
 
-### Client dispatches
+### Client to Server
+
+#### Client dispatches
 
 > /**
 >
@@ -148,7 +152,7 @@ protected async onStart(): Promise<void> {
 }
 ```
 
-### Server listens
+#### Server listens
 
 > /**
 >
@@ -197,9 +201,9 @@ protected async onStart(): Promise<void> {
 }
 ```
 
-## Server to Client
+### Server to Client
 
-### Server dispatches - single client
+#### Server dispatches - single client
 
 > /** The server dispatches events to the designated client
 >
@@ -263,7 +267,7 @@ protected async onStart(): Promise<void> {
 }
 ```
 
-### Server dispatches - all clients
+#### Server dispatches - all clients
 
 >  /** Server dispatches events to all clients
 >
@@ -331,7 +335,7 @@ protected async onStart(): Promise<void> {
 }
 ```
 
-### Server listens
+#### Server listens
 
 > /**
 >
@@ -401,7 +405,7 @@ protected async onStart(): Promise<void> {
 }
 ```
 
-# Use `replicated` to Synchronize Properties
+## Use `replicated` to Synchronize Properties
 
 Example:
 
