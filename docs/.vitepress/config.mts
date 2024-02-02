@@ -176,18 +176,18 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
     ]
   },
   {
-    text: 'Resource',
+    text: 'Asset',
     collapsible: true,
     collapsed: true,
     items: [
-      { text: 'Resources', link: '/Resource/Resources.md' },
+      { text: 'Asset', link: '/Asset/Asset.md' },
       {
-        text: 'Resource Loading and Downloading',
-        link: '/Resource/Resource Loading and Downloading.md'
+        text: 'Asset Loading and Downloading',
+        link: '/Asset/Asset Loading and Downloading.md'
       },
       {
-        text: 'Resource Upload Tool',
-        link: '/Resource/Resource Upload Tool.md'
+        text: 'Asset Upload Tool',
+        link: '/Asset/Asset Upload Tool.md'
       }
     ]
   },

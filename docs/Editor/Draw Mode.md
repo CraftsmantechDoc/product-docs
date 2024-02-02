@@ -34,9 +34,9 @@ When you are building a scene made up of simple repetitive objects in a project,
 
 - Overview
 
-  -  In Draw Mode, the object that you want to create in the scene with the mouse cursor in the main viewport is called a drawing object. The editor currently supports two ways of selecting drawing objects, in the resource repository and in the main viewport.
+  -  In Draw Mode, the object that you want to create in the scene with the mouse cursor in the main viewport is called a drawing object. The editor currently supports two ways of selecting drawing objects, in the Asset Library and in the main viewport.
 
-- **Selecting Drawing Objects in the resource repository**
+- **Selecting Drawing Objects in the Asset Library**
 
   - 1.  In drawing mode, after clicking a static object in the repository, the model will be set as a drawing object, following the mouse cursor in the main viewport.
 

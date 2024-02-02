@@ -14,7 +14,7 @@ Each window bears part of the editor's functions. Become familiar with the opera
 
 ## What Does an Editor Window Interface Contain?
 
-- The editor window consists of eight parts: Top Tab, Menu Bar, Tool Bar, Local Resource Repository, Main Viewport, Object Manager, Project Content, and Properties Panel.
+- The editor window consists of eight parts: Top Tab, Menu Bar, Tool Bar, Asset Library, Main Viewport, Object Manager, Project Content, and Properties Panel.
 - The default layout is shown below
 
 ![1701063770668-116](https://arkimg-qn.ark.online/1701063770668-116-1702377698473-1.jpeg)
@@ -247,7 +247,7 @@ Each window bears part of the editor's functions. Become familiar with the opera
 
       
 
-### Local Resource Repository
+### Asset Library
 
 ![img](https://arkimg-qn.ark.online/1701063770650-44.png)
 

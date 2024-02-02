@@ -1,8 +1,8 @@
-# Welcome to the GPark Editor Documentation!
+# Welcome to the PGE Documentation!
 
 ![NQDVCpCLyB](https://qn-basic-content.gpark.io/athena/upload_file/online/1ce99414efa946ff8cbdc8e114e6b43e_5075331.webp)
 
-The Editor Documentation is like a dictionary/manual of the editor. Here, you can find detailed descriptions of the functionality of each editor module.
+The PGE Documentation is like a dictionary/manual of the editor. Here, you can find detailed descriptions of the functionality of each editor module.
 
 **The site is still under construction. We are working around the clock to bring you the full editor documentation, so leave a bookmark and stay tuned!**
 

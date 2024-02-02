@@ -104,15 +104,15 @@ This chapter contains the following three main contents.
 ### Using Prefabs
 
 - Editing State
-  - In the Resource Repository or Project Content, you can find prefabs and drag them into the object manager or the main viewport to create prefab reference objects.
+  - In the Asset Library or Project Content, you can find prefabs and drag them into the object manager or the main viewport to create prefab reference objects.
 - Runtime State
   - You can dynamically generate prefab reference objects using APIs during runtime.
 
 ```TypeScript
-/*Synchronously generate a prefab reference object using the asset ID from the Resource Repository or Project Content (requires preloaded resources)*/
+/*Synchronously generate a prefab reference object using the asset ID from the Asset Library or Project Content (requires preloaded resources)*/
 GameObject.spawn("AssetId")
 
-/*Asynchronously generate a prefab reference object using the asset ID from the Resource Repository or Project Content (does not require preloaded resources)*/
+/*Asynchronously generate a prefab reference object using the asset ID from the Asset Library or Project Content (does not require preloaded resources)*/
 GameObject.asyncSpawn("AssetId")
 ```
 
