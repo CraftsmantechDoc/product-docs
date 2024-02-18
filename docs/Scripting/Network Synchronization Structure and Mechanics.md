@@ -14,7 +14,7 @@ To understand the principle of network synchronization, we must first answer a f
 
 > The **Client**, or user-end, is the program that provides local services to clients as opposed to the server. Except for some applications that run only locally, they are generally installed on ordinary terminals and must run in conjunction with each other and the server.
 
-> The **Game Client** is the software that stores many resources in the game. Players input commands through the client, then the client translates them into data and sends them to the server. Afterward, the server gives the results after processing, and then the client translates them into graphical feedback for the players. One can say that the client is an intermediary between the player and the server.
+> The **Game Client** is the software that stores many assets in the game. Players input commands through the client, then the client translates them into data and sends them to the server. Afterward, the server gives the results after processing, and then the client translates them into graphical feedback for the players. One can say that the client is an intermediary between the player and the server.
 
 In short, for game development, the client is the game program running on the player's terminal device.
 
@@ -24,11 +24,11 @@ On the other hand, **stand-alone games** are not connected to the server and sto
 
 ### Server
 
-> A Server provides service for the client, such as providing resources to the client and saving client data. It is an important way to realize game characterization and the most direct method to express through the game. For example, if you want to modify the parameters of a certain NPC, simply reload it and it will be reflected immediately in the game.
+> A Server provides service for the client, such as providing assets to the client and saving client data. It is an important way to realize game characterization and the most direct method to express through the game. For example, if you want to modify the parameters of a certain NPC, simply reload it and it will be reflected immediately in the game.
 
 > Game Server provides services for the game client, such as providing login for the client, saving the game player information, and providing the player with online gameplay, all of which are key differences from stand-alone games. The game client's login requires the authorization of the server. For example, the game server provides the login to the player, and the login is the necessary tool to connect to the server, and the login can also be viewed as the authorization file of the server.
 
-As mentioned above, the server carries great responsibility, it stores all the client's resources and data, even the game logic
+As mentioned above, the server carries great responsibility, it stores all the client's assets and data, even the game logic
 
 Example Cases:
 
@@ -69,7 +69,7 @@ The pieces, on the other hand, need to be created and destroyed dynamically, so 
 
 > Objects with their "Network Status" set to "Client" will only be created on the client side. They will not be created on the server side and will not be synchronized.
 
-Objects like special effects, item models, and UI resources are often set to "Client".
+Objects like special effects, item models, and UI assets are often set to "Client".
 
 These objects are generally only needed for local rendering, playback, determination, etc.
 

@@ -12,7 +12,7 @@ This chapter contains the following three main contents.
 
 ### What is a Prefab?
 
-- A prefab is a reusable combination of game objects, serving as a mechanism to compose multiple game objects into a single, independent resource. Prefabs can be used to create and store all the components, properties, and child objects of a game object. When the same game object needs to be reused multiple times, prefabs can be utilized by setting the game object as a prefab.
+- A prefab is a reusable combination of game objects, serving as a mechanism to compose multiple game objects into a single, independent asset. Prefabs can be used to create and store all the components, properties, and child objects of a game object. When the same game object needs to be reused multiple times, prefabs can be utilized by setting the game object as a prefab.
 
 ### Prefab Basic Rules
 
@@ -55,7 +55,7 @@ This chapter contains the following three main contents.
 
 ### Storage of Prefabs
 
-- The Project Content under the prefab category displays all the stored prefab resources within the current project.
+- The Project Content under the prefab category displays all the stored prefab assets within the current project.
 
 ![img](https://arkimg-qn.ark.online/1701741530442-6.png)
 
@@ -109,10 +109,10 @@ This chapter contains the following three main contents.
   - You can dynamically generate prefab reference objects using APIs during runtime.
 
 ```TypeScript
-/*Synchronously generate a prefab reference object using the asset ID from the Asset Library or Project Content (requires preloaded resources)*/
+/*Synchronously generate a prefab reference object using the asset ID from the Asset Library or Project Content (requires preloaded assets)*/
 GameObject.spawn("AssetId")
 
-/*Asynchronously generate a prefab reference object using the asset ID from the Asset Library or Project Content (does not require preloaded resources)*/
+/*Asynchronously generate a prefab reference object using the asset ID from the Asset Library or Project Content (does not require preloaded assets)*/
 GameObject.asyncSpawn("AssetId")
 ```
 
@@ -175,6 +175,6 @@ GameObject.asyncSpawn("AssetId")
 
 ## Important Notes
 
-When dynamically generating prefabs using the spawn function, you need to use the AssetUtil class to download and load the prefab resources, or drag the prefab into the priority loading area of the Object Manager.
+When dynamically generating prefabs using the spawn function, you need to use the AssetUtil class to download and load the prefab assets, or drag the prefab into the priority loading area of the Object Manager.
 
-When using `asyncSpawn` for asynchronous prefab generation, there is no need to pre-load resources.
+When using `asyncSpawn` for asynchronous prefab generation, there is no need to pre-load assets.

@@ -1,3 +1,5 @@
+# The Event System
+
 **Reading this chapter takes about 20 minutes.**
 
 This chapter outlines the rules and considerations for dispatching events between scripts in the editor.
