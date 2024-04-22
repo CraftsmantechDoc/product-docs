@@ -208,7 +208,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
   ignoreDeadLinks: true,
   title: 'Editor Doc',
   appearance: false,
-  description: 'The Editor Documentation is like a dictionary/manual of the GPark editor. Here, you can find detailed descriptions of the functionality of each editor module.',
+  description:
+    'The Editor Documentation is like a dictionary/manual of the GPark editor. Here, you can find detailed descriptions of the functionality of each editor module.',
   outDir: '../dist',
   head: [
     [
@@ -218,6 +219,29 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         href: '/logo2.png'
       }
     ]
+    // [
+    //   'script',
+    //   {},
+    //   `
+    // window.PandoraConfig = {
+    //   base: {
+    //     index_type: 'todo/wl',
+    //     selfpackagename: 'todo',
+    //   },
+    //   other: {
+    //     appkey: 'todo',
+    //     zone: 'en',
+    //     baseUrl: 'https://web-push.metaapp.cool'
+    //   }
+    // }
+    // `
+    // ],
+    // [
+    //   'script',
+    //   {
+    //     src: 'https://web-static-mir-01-qn.gpark.io/common/pandora/5.2.7/pandora_sdk.min.js'
+    //   }
+    // ]
   ],
   themeConfig: {
     pandora: {
