@@ -6,7 +6,7 @@ This chapter outlines the reconnection mechanism after a disconnection occurs in
 
 ## What is Reconnection?
 
-Just like any other online game, the experiences you create and publish on GPark might be disconnected during gameplay due to network fluctuations/errors and server issues. **The reconnection feature** is provided by default and the session will be automatically reconnected in case of disconnection. A successful reconnection will allow players to continue playing, while a failed reconnection will result in disconnection from the server.
+Just like any other online game, the experiences you create and publish on PGE might be disconnected during gameplay due to network fluctuations/errors and server issues. **The reconnection feature** is provided by default and the session will be automatically reconnected in case of disconnection. A successful reconnection will allow players to continue playing, while a failed reconnection will result in disconnection from the server.
 
 ## Reconnection States
 

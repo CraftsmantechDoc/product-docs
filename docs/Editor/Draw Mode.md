@@ -11,7 +11,7 @@ This chapter contains the following two main parts.
 
 ### What are Draw Modes?
 
-Draw Mode is a mode of placing resource objects into the scene. When Draw Mode is enabled in the toolbar, the selected resource object will follow the mouse cursor in the main viewport. Left-click in the main viewport to create the object at the cursor position; long-click and drag in the main viewport to create multiple models in quick succession in the dragged area.
+Draw Mode is a mode of placing asset objects into the scene. When Draw Mode is enabled in the toolbar, the selected asset object will follow the mouse cursor in the main viewport. Left-click in the main viewport to create the object at the cursor position; long-click and drag in the main viewport to create multiple models in quick succession in the dragged area.
 
 ![img](https://arkimg-qn.ark.online/1701065152056-13.png)
 
@@ -34,9 +34,9 @@ When you are building a scene made up of simple repetitive objects in a project,
 
 - Overview
 
-  -  In Draw Mode, the object that you want to create in the scene with the mouse cursor in the main viewport is called a drawing object. The editor currently supports two ways of selecting drawing objects, in the resource repository and in the main viewport.
+  -  In Draw Mode, the object that you want to create in the scene with the mouse cursor in the main viewport is called a drawing object. The editor currently supports two ways of selecting drawing objects, in the Asset Library and in the main viewport.
 
-- **Selecting Drawing Objects in the resource repository**
+- **Selecting Drawing Objects in the Asset Library**
 
   - 1.  In drawing mode, after clicking a static object in the repository, the model will be set as a drawing object, following the mouse cursor in the main viewport.
 
@@ -44,7 +44,7 @@ When you are building a scene made up of simple repetitive objects in a project,
 
 - **Select Drawing Object in the main viewport**
 
-  -  In drawing mode, right-click to select a static object in the main viewport and select "Set as Drawing Object" in the right-click menu to get the static object resource and set it as a drawing object and follow the mouse cursor in the main viewport. If the selected object has mounted child objects, only the single model selected by the cursor will be set as the drawing object.
+  -  In drawing mode, right-click to select a static object in the main viewport and select "Set as Drawing Object" in the right-click menu to get the static object asset and set it as a drawing object and follow the mouse cursor in the main viewport. If the selected object has mounted child objects, only the single model selected by the cursor will be set as the drawing object.
 
   -  ![img](https://arkimg-qn.ark.online/1701065152046-4.gif)
 

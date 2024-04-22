@@ -14,7 +14,7 @@ Each window bears part of the editor's functions. Become familiar with the opera
 
 ## What Does an Editor Window Interface Contain?
 
-- The editor window consists of eight parts: Top Tab, Menu Bar, Tool Bar, Local Resource Repository, Main Viewport, Object Manager, Project Content, and Properties Panel.
+- The editor window consists of eight parts: Top Tab, Menu Bar, Tool Bar, Asset Library, Main Viewport, Object Manager, Project Content, and Properties Panel.
 - The default layout is shown below
 
 ![1701063770668-116](https://arkimg-qn.ark.online/1701063770668-116-1702377698473-1.jpeg)
@@ -26,7 +26,7 @@ Each window bears part of the editor's functions. Become familiar with the opera
 #### Tabbing
 
 - All five windows support tabbing except for the Menu Bar, Top Tab, and Tool Bar.
-- Take the local repository as an example, click on the small yellow corner at the top left of the picture, and the local repository tab will appear.
+- Take the Asset Library as an example, click on the small yellow corner at the top left of the picture, and the Asset Library tab will appear.
 
 ![img](https://arkimg-qn.ark.online/1701063770647-1.png)![img](https://arkimg-qn.ark.online/1701063770647-2.png)
 
@@ -247,36 +247,36 @@ Each window bears part of the editor's functions. Become familiar with the opera
 
       
 
-### Local Resource Repository
+### Asset Library
 
 ![img](https://arkimg-qn.ark.online/1701063770650-44.png)
 
-- The local repository provides a variety of resources to build a wide range of scenes
-- The icon tabs on the left are Art Resources, Game Function Object, Favorites, and History respectively
-  - Logic Resources: objects that have some generic ability to implement game logic
-    - Index Level: Logical Resources - Resource Types
-  - Art Resources: used to build the appearance of scenes
-    - Index Level: Art Resources - Resource Type - Theme
+- The Asset Library provides a variety of assets to build a wide range of scenes
+- The icon tabs on the left are Art Assets, Game Function Object, Favorites, and History respectively
+  - Logic Assets: objects that have some generic ability to implement game logic
+    - Index Level: Logical Assets - Asset Types
+  - Art Assets: used to build the appearance of scenes
+    - Index Level: Art Assets - Asset Type - Theme
   - Favorites and History tabs are under development and will be available soon
 
-#### Download and Previewing Resources
+#### Download and Previewing Assets
 
-- The resources in the editor are stored on cloud servers. You need to click on the resource to download it
-- Click on the downloaded resources, you can preview them in the property panel. Static models, effects, and animations can be previewed
-- Each time you enter a project, it takes a few seconds to pull information about the resource from the cloud for resource display, filtering, and search operations
+- The assets in the editor are stored on cloud servers. You need to click on the asset to download it
+- Click on the downloaded assets, you can preview them in the property panel. Static models, effects, and animations can be previewed
+- Each time you enter a project, it takes a few seconds to pull information about the asset from the cloud for asset display, filtering, and search operations
 
-#### Using Resources
+#### Using Assets
 
-- Different resources are used in different ways, please refer to the resource-related documentation for details
-- Right-click on a resource to copy the resource ID and name for easy reference in scripts
+- Different assets are used in different ways, please refer to the asset-related documentation for details
+- Right-click on a asset to copy the asset ID and name for easy reference in scripts
 
 ![img](https://arkimg-qn.ark.online/1701063770650-45.png)
 
 #### Filter
 
-- Supports filtering the theme and category of resources
+- Supports filtering the theme and category of assets
 - Style filtering by drop-down box selection, supports multi-selection. Results are unioned, in other words, displayed results meet at least one of the filter requirements
-- Different resource types have different styles, and filters will not be cleared when switching themes under the same type
+- Different asset types have different styles, and filters will not be cleared when switching themes under the same type
 
 ![img](https://arkimg-qn.ark.online/1701063770650-46.png)
 
@@ -286,13 +286,13 @@ Each window bears part of the editor's functions. Become familiar with the opera
 
 - Theme and category filter criteria are intersected
 
-- When switching between topics of the same resource type, the filters for styles are retained and the filters for categories are removed
+- When switching between topics of the same asset type, the filters for styles are retained and the filters for categories are removed
 
 #### Search
 
 ![img](https://arkimg-qn.ark.online/1701063770650-48.png)
 
-- Fuzzy search can be performed by searching resource name, resource ID, and resource tag
+- Fuzzy search can be performed by searching asset name, asset ID, and asset tag
 - When ending the search state, the navigation directory is initialized and the current category filter is cleared, but the style filter will be retained the next time you enter the directory before the search
 
 ### Main Viewport
@@ -451,7 +451,7 @@ Each window bears part of the editor's functions. Become familiar with the opera
 
   - Prefab structure tree can expand and collapse nodes
 
-  - Viewport Preview: similar to the main viewport camera operation, this preview offers a better view of this specific resource
+  - Viewport Preview: similar to the main viewport camera operation, this preview offers a better view of this specific asset
 
     ![img](https://arkimg-qn.ark.online/1701063770651-67.png)
 
@@ -569,13 +569,13 @@ Each window bears part of the editor's functions. Become familiar with the opera
 
 #### Materials
 
-- Material files are different from other files in that they require specific material resource support. Material files are description files (prefab is also a description file), which describe the configuration of the parameters of the material resource
+- Material files are different from other files in that they require specific material asset support. Material files are description files (prefab is also a description file), which describe the configuration of the parameters of the material asset
 - To customize the material, you first need to go to the properties panel to find the material properties and click the Edit Material button
 
 ![img](https://arkimg-qn.ark.online/1701063770652-80.png)
 
-- After clicking the button, a new material file will be created in the project content based on the material resource
-- Double-click on the material file to edit the properties of the material and the texture resources used by the material
+- After clicking the button, a new material file will be created in the project content based on the material asset
+- Double-click on the material file to edit the properties of the material and the texture assets used by the material
 - After modifying the material, click Save to save the material's parameter settings
 
 ### Output Window
@@ -717,8 +717,8 @@ Each window bears part of the editor's functions. Become familiar with the opera
 - Locating Source
 
   - **Objects in the object manager are actually referenced objects, which themselves are only a reference relationship, not the data itself**
-  - Place the data source of the object in the selected state **(the source is generally the repository and project content)**
-  - If you drag a resource from the repository to the main viewport, the locating source button can directly lead to the location of the resource in the repository, and placed it in the selected state
+  - Place the data source of the object in the selected state **(the source is generally the library and project content)**
+  - If you drag a asset from the library to the main viewport, the locating source button can directly lead to the location of the asset in the library, and placed it in the selected state
   - If the data source disappears, the object in the object manager will turn red, at this point the object is empty and useless
   - ![img](https://arkimg-qn.ark.online/1701063770653-101.png)
 
@@ -743,7 +743,7 @@ Each window bears part of the editor's functions. Become familiar with the opera
 
 ![img](https://arkimg-qn.ark.online/1701063770653-102.png)
 
-- The Properties Panel is used for previewing resource information and modifying object properties
+- The Properties Panel is used for previewing asset information and modifying object properties
 - The preview function has been explained above already, so the following mainly explains the operation related to modifying object properties
 
 #### Search
@@ -765,7 +765,7 @@ Each window bears part of the editor's functions. Become familiar with the opera
 - The values are basically modified by the controls shown in the figure
 - You can modify the value by holding the input box and sliding it left or right, or you can click and enter it by typing directly
 - When editing material properties, you need to customize the material before you can modify it (generate a material description file under the project content)
-- When this material resource refers to a file in the project content, the properties of the material can only be modified in the properties panel when it is used
+- When this material asset refers to a file in the project content, the properties of the material can only be modified in the properties panel when it is used
 
 ![img](https://arkimg-qn.ark.online/1701063770654-106.png)
 
@@ -821,12 +821,12 @@ Each window bears part of the editor's functions. Become familiar with the opera
 - Picked-up objects can be located, making it easy to find the position of the picked-up objects in the object manager
 - The box under the straw prohibits input, if you want to clear the picked-up object, click the reset button next to the eyedropper button
 
-#### Resource Selector
+#### Asset Selector
 
 ![img](https://arkimg-qn.ark.online/1701063770654-115.png)
 
-- The purpose of this widget is to replace the currently used resource with a resource from the repository/project content
-- Method: Drag and drop the same type of resources in the local repository/project content to achieve the use of resources; for more details, please refer to the resource-related documentation
+- The purpose of this widget is to replace the currently used asset with a asset from the library/project content
+- Method: Drag and drop the same type of assets in the Asset Library/project content to achieve the use of assets; for more details, please refer to the asset-related documentation
 
 #### Adding/Removing Components
 

@@ -1,6 +1,4 @@
-**Reading this chapter takes about 10 minutes.**
-
-## Methods and Examples of Using and Dynamically Loading Resources
+# Methods and Examples of Using and Dynamically Loading Assets
 
 ### Getting existing objects in the scene
 
@@ -134,11 +132,11 @@ export default class GetObj extends Script {
 let goClone = this.gameObject.Clone();
 ```
 
-### Generating Objects from the Repository in the Scene
+### Generating Objects from the Library in the Scene
 
 ##### **spawn(assetId: string, gameObjectInfo?: mw.GameObjectInfo) : GameObject**
 
-​      Construct a `GameObject` based on the GUID (GUID of the resource, synchronized or not).
+​      Construct a `GameObject` based on the GUID (GUID of the asset, synchronized or not).
 
 ```TypeScript
 @Component
@@ -158,7 +156,7 @@ export default class GetObj extends Script {
 }
 ```
 
-When using the `spawn` function, the resource ID to be generated needs to be preloaded
+When using the `spawn` function, the asset ID to be generated needs to be preloaded
 
 Use the above method and add it to the script
 
@@ -170,27 +168,27 @@ AssetUtil.asyncDownloadAsset("").then((flag) => {
 });
 ```
 
-## Difference Between Using and Loading Resources
+## Difference Between Using and Loading Assets
 
 **The most essential difference is between Get and New.**
 
-### Using Resource
+### Using Asset
 
- **All functions in 1.1** serve **to Get Resources, that is to Use Resources**
+ **All functions in 1.1** serve **to Get Assets, that is to Use Assets**
 
- Using a resource will point the object's memory address to the used variable, without generating new memory consumption.
+ Using a asset will point the object's memory address to the used variable, without generating new memory consumption.
 
-### Loading Resource
+### Loading Asset
 
- **All functions in 1.2, 1.3, and 1.4 serve to create New, that is to Load Resource**
+ **All functions in 1.2, 1.3, and 1.4 serve to create New, that is to Load Asset**
 
- Loading a resource requests a new block of memory from the editor to store the new object.
+ Loading a asset requests a new block of memory from the editor to store the new object.
 
  Whether copying or generating, new memory consumption will be generated.
 
  It is recommended to make a pool of objects that need to be repeatedly created and destroyed in logic to avoid excessive memory consumption.
 
-## Notes on Using and Loading Resources
+## Notes on Using and Loading Assets
 
 **1. The object you get through the parent node can only be written on the Server side, the Client side currently does not maintain the parent-child node relationship.**
 
@@ -204,23 +202,23 @@ AssetUtil.asyncDownloadAsset("").then((flag) => {
 
 
 
-**3. All resource objects obtained should be nulled before use to prevent the code from running**
+**3. All asset objects obtained should be nulled before use to prevent the code from running**
 
 
 
-**4. Resources that need to be loaded dynamically (resources in the repository) must be preloaded (preloaded) first, otherwise they will not be created**
+**4. Assets that need to be loaded dynamically (assets in the library) must be preloaded (preloaded) first, otherwise they will not be created**
 
 ```
  @Core.Property()
 
-  preloadAssets = "Resource ID";
+  preloadAssets = "Asset ID";
 ```
 
  **Notes:**
 
- Method 1: You can load resources into the project asynchronously by means of AssetUtil.asyncDownloadAsset
+ Method 1: You can load assets into the project asynchronously by means of AssetUtil.asyncDownloadAsset
 
- Method 2: You can drag and drop the resources that need to be dynamically loaded to the priority load for marking (same as preload in principle)
+ Method 2: You can drag and drop the assets that need to be dynamically loaded to the priority load for marking (same as preload in principle)
 
 
 
@@ -234,8 +232,8 @@ AssetUtil.asyncDownloadAsset("").then((flag) => {
 
  When scene 1 jumps to scene 2, we can use UI to block the process of scene loading.
 
- Use asynchronous loading to wait for feedback, wait until all resources in the scene are loaded, and then cancel UI masking
+ Use asynchronous loading to wait for feedback, wait until all assets in the scene are loaded, and then cancel UI masking
 
  **Synchronous loading case:**
 
- When we need to initialize many resources at the same time, and the resources are not used in time, we can use synchronous loading to facilitate the program to load multiple resources at the same time and speed up the progress.
+ When we need to initialize many assets at the same time, and the assets are not used in time, we can use synchronous loading to facilitate the program to load multiple assets at the same time and speed up the progress.

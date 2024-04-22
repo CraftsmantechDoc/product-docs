@@ -14,7 +14,7 @@ This chapter will explain what the Character Editor is and how to use it.
 ### Basics of the Character Editor
 
 - Character Style
-  - The Character Editor currently provide four styles of resource: **Anime Style**, **Low-poly Style**, **Realistic**, and **Cartoony**.
+  - The Character Editor currently provide four styles of asset: **Anime Style**, **Low-poly Style**, **Realistic**, and **Cartoony**.
 
 **Anime Style**
 
@@ -44,7 +44,7 @@ This chapter will explain what the Character Editor is and how to use it.
 
   - Clothing: 
 
-    Customize character appearance by replacing resources and adjusting parameters such as color and pattern. Replacable resources include: 
+    Customize character appearance by replacing assets and adjusting parameters such as color and pattern. Replacable assets include: 
 
     - Front hair 
     - Back hair 
@@ -113,9 +113,9 @@ This chapter will explain what the Character Editor is and how to use it.
 ![img](https://arkimg-qn.ark.online/1701052739825-66.png)
 
 - Basic Stance Preview
-  - Click the switch button to switch the whole set of stance preview resources, click a stance to preview in the main viewport
+  - Click the switch button to switch the whole set of stance preview assets, click a stance to preview in the main viewport
 - Animation Sequence Preview
-  - After dragging the animation sequence from the local repository into the animation list, tap a resource and click the [Play] button to preview it in the main viewport (Note: the animation sequence in the animation list can be deleted by the shortcut key "Delete")
+  - After dragging the animation sequence from the local repository into the animation list, tap a asset and click the [Play] button to preview it in the main viewport (Note: the animation sequence in the animation list can be deleted by the shortcut key "Delete")
 
 ### Saving and using character editing data
 
@@ -161,7 +161,7 @@ This chapter will explain what the Character Editor is and how to use it.
   - Use during runtime: apply the data stored in the data file to the Character via the API
 
 ```TypeScript
-//Call the project content-character data file resource ID to change the corresponding data of the humanoid object
+//Call the project content-character data file Asset ID to change the corresponding data of the humanoid object
 LoadEditorDataByGuid("GUID")
 //Synchronize character appearance to multiple ends
 SyncDIYDataBegin()

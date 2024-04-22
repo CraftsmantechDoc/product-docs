@@ -7,7 +7,7 @@ This chapter describes how to set the graphics quality in the Editor.
 ## Why Set Graphics Quality?
 
 - When players launch a game, the system will **automatically** detect the player device's hardware and select the appropriate graphics quality level.
-- In the editor, developers can set the graphics quality of the main viewport and running viewport, so that they can **simulate and preview** the display of resources and scenes under different levels of image quality when developing games.
+- In the editor, developers can set the graphics quality of the main viewport and running viewport, so that they can **simulate and preview** the display of assets and scenes under different levels of image quality when developing games.
 
 ## How to Set the Graphics Quality in the Editor?
 
